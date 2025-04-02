@@ -1,0 +1,175 @@
+.vendors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .vendors-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .vendors-header h1 {
+    color: #2e7d32;
+    margin: 0;
+  }
+  
+  .back-button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #444;
+    transition: background-color 0.2s;
+  }
+  
+  .back-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+  }
+  
+  .vendors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  
+  .vendor-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .vendor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .vendor-name {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2e7d32;
+    font-size: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  .vendor-details {
+    margin-bottom: 20px;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .vendor-location, .vendor-type, .vendor-capacity {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .vendor-products {
+    margin-bottom: 15px;
+  }
+  
+  .product-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 5px;
+  }
+  
+  .product-tag {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .vendor-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .contact-btn, .view-details-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .contact-btn {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .contact-btn:hover {
+    background-color: #c8e6c9;
+  }
+  
+  .view-details-btn {
+    background-color: #2e7d32;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #1b5e20;
+  }
+  
+  .no-vendors {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .vendors-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .vendor-actions {
+      flex-direction: column;
+    }
+  }

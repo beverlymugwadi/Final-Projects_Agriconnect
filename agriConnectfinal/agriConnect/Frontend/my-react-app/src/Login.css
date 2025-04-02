@@ -1,0 +1,244 @@
+/* Modern Login/Signup Styles */
+:root {
+    --primary-color: #16a34a;
+    --primary-dark: #15803d;
+    --primary-light: #dcfce7;
+    --error-color: #ef4444;
+    --error-bg: #fef2f2;
+    --warning-color: #f59e0b;
+    --warning-bg: #fffbeb;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --border-light: #e5e7eb;
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    padding: 2rem 1rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  .auth-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .auth-header {
+    padding: 2rem 2rem 1.5rem;
+    text-align: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo {
+    width: 48px;
+    height: 48px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .auth-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .auth-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  
+  .auth-form {
+    padding: 0 2rem 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+  }
+  
+  .form-input::placeholder {
+    color: var(--text-muted);
+  }
+  
+  /* Auth button containers and buttons */
+  .auth-buttons-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+  /* Make both buttons consistent in appearance and behavior */
+  .go-dashboard-button, .logout-button {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px; /* Fixed height for both buttons */
+    line-height: 1;
+    box-sizing: border-box;
+    margin: 0; /* Reset margin to ensure they're on the same line */
+  }
+  
+  .go-dashboard-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+  }
+  
+  .go-dashboard-button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .logout-button {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+  
+  .logout-button:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+  
+  /* Main auth button */
+  .auth-button {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+  }
+  
+  .auth-button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .auth-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  .auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  
+  .auth-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .auth-link:hover {
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    background-color: var(--error-bg);
+    border-left: 4px solid var(--error-color);
+    color: var(--error-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .auth-redirect-message {
+    background-color: var(--warning-bg);
+    border-left: 4px solid var(--warning-color);
+    color: #92400e;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .already-logged-in {
+    background-color: var(--primary-light);
+    border-left: 4px solid var(--primary-color);
+    color: var(--primary-dark);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+  
+  .remember-me input {
+    margin-right: 0.5rem;
+  }
